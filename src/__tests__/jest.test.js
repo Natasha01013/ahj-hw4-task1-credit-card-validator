@@ -1,5 +1,5 @@
-import {luhnCheck} from "../js/luhncheck";
-import {getCardType} from "../js/getcardtype";
+import {luhnCheck} from "./js/luhncheck";
+import {getCardType} from "./js/getcardtype";
 
 
 test('luhnCheck should validate card numbers', () => {

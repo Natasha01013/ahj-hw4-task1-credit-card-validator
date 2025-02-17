@@ -7,6 +7,7 @@ test('should display correct card logo and validity message', async () => {
 
     await page.type('#card-number', '4111111111111111');
     await page.click('button[type="submit"]');
+
     await page.waitForSelector('#card-type');
     await page.waitForSelector('#validity'); // Ожидаем появления обоих элементов
     
