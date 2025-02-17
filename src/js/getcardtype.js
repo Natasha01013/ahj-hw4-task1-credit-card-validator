@@ -21,12 +21,13 @@ export function getCardType(cardNumber) {
   document.getElementById('card-form').addEventListener('submit', function (e) {
     e.preventDefault();
   
-    const cardNumber = document.getElementById('card-number').value.replace(/\D/g, '');
+    const cardNumber = document.getElementById('card-number').value.replace(/\D/g, '');// удаление нецифровых символов
     const cardType = getCardType(cardNumber);
     const isValid = luhnCheck(cardNumber);
   
-    document.getElementById('card-type').textContent = cardType;
-  
+    document.getElementById('card-type').textContent = `Тип карты: ${cardType}`;
+   
+    // Динамическое отображение логотипа
     const cardLogos = document.querySelectorAll('.card-logo');
     cardLogos.forEach((logo) => {
       logo.style.opacity = 0.2;  // Делает остальные изображения полупрозрачными
