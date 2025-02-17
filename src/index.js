@@ -3,7 +3,6 @@ import {luhnCheck} from './js/luhncheck.js'
 import {getCardType} from './js/getcardtype';
 
 document.getElementById('card-form').addEventListener('submit', function(e) {
-    console.log('Отправка формы');
     e.preventDefault();
   
     const cardNumber = document.getElementById('card-number').value.replace(/\D/g, '');// удаление нецифровых символов
@@ -12,12 +11,13 @@ document.getElementById('card-form').addEventListener('submit', function(e) {
   
     document.getElementById('card-type').textContent = `Тип карты: ${cardType}`;
    
-    // Динамическое отображение логотипа
+    //Отображение логотипа
     const cardLogos = document.querySelectorAll('.card-logo');
     cardLogos.forEach((logo) => {
       logo.style.opacity = 0.2;  // Делает остальные изображения полупрозрачными
     });
   
+    //В зависимости от атрибута alt будем искать нужный логотип карты
     const validCardLogo = Array.from(cardLogos).find((logo) => logo.alt.toLowerCase().includes(cardType.toLowerCase()));
     if (validCardLogo) validCardLogo.style.opacity = 1;  // Сделает соответствующую картинку видимой
   

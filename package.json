@@ -6,7 +6,7 @@
     "lint": "eslint .",
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode production --open",
-    "test": "jest --config jest.config.js"
+    "test": "jest --coverage --config jest.config.js"
   },
   "author": "natasha01013",
   "license": "ISC",
@@ -28,12 +28,12 @@
     "jest-environment-jsdom": "^29.7.0",
     "jest-puppeteer": "^11.0.0",
     "mini-css-extract-plugin": "^2.9.2",
-    "puppeteer": "^24.2.1",
     "webpack": "^5.98.0",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.0"
   },
   "dependencies": {
-    "core-js": "^3.40.0"
+    "core-js": "^3.40.0",
+    "puppeteer": "^24.2.1"
   }
 }
