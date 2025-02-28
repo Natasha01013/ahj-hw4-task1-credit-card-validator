@@ -19,7 +19,7 @@ test('should display correct card logo and validity message', async () => {
 
     // Ожидаемые значения
     expect(cardType).toContain('Visa');
-    expect(validity).toContain('Номер карты валиден');
+    expect(validity).toContain('Номер карты действителен');
 
     await browser.close();
 });

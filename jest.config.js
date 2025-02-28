@@ -4,5 +4,4 @@ module.exports = {
     globals: {
       URL: 'http://localhost:9000', // Адрес локального сервера
     },
-    testEnvironment: 'jest-environment-jsdom', // Это эмулирует среду браузера
   };
