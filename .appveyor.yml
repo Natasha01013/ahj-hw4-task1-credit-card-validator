@@ -9,7 +9,9 @@ branches: # какие ветки отслеживаются
 # cache: node_modules  # кеширование, чтобы node_modules работал быстрее
 
 install:
-  - npm install  # команда установки зависимостей
+  - echo "Starting npm install..." # логи
+  - npm install # команда установки зависимостей
+  - echo "npm install finished" # логи
 
 build_script:
   - npm run build   # команда сборки
