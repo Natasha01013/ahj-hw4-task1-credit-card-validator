@@ -7,10 +7,9 @@
           "corejs": "3.22",
           "targets": {
           "node": "current"
-	}
-
+	        }
         }
       ]
     ]
-  }
+}
   
